@@ -41,7 +41,7 @@
    },
    "default_locale": "en",
    "description": "__MSG_appDescription__",
-   "differential_fingerprint": "1.af8a650934e6410c22eff39b52505d55e52ea87846b3095b26813a36f7e87ec1",
+   "differential_fingerprint": "1.8c52f9c88755f6b9fbbe530889c053f0a4d63a6a37ba5a5b293dd13ec9fd8491",
    "externally_connectable": {
       "ids": [ "*" ],
       "matches": [ "https://metamask.io/*" ]
@@ -67,5 +67,5 @@
    },
    "short_name": "__MSG_appName__",
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "12.9.3"
+   "version": "12.10.1"
 }

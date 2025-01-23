@@ -416,6 +416,9 @@
    "alertMessageAddressMismatchWarning": {
       "message": "Angreifer imitieren manchmal Websites, indem sie kleine Änderungen an der Adresse der Website vornehmen. Vergewissern Sie sich, dass Sie mit der beabsichtigten Website interagieren, bevor Sie fortfahren."
    },
+   "alertMessageChangeInSimulationResults": {
+      "message": "Die voraussichtlichen Änderungen für diese Transaktion wurden aktualisiert. Überprüfen Sie diese sorgfältig, bevor Sie fortfahren."
+   },
    "alertMessageGasEstimateFailed": {
       "message": "Wir sind nicht in der Lage, eine genaue Gebühr anzugeben, und diese Schätzung könnte zu hoch sein. Wir schlagen vor, dass Sie ein individuelles Gas-Limit eingeben, aber es besteht das Risiko, dass die Transaktion trotzdem fehlschlägt."
    },
@@ -434,9 +437,6 @@
    "alertMessageNoGasPrice": {
       "message": "Wir können mit dieser Transaktion nicht fortfahren, bis Sie die Gebühr manuell aktualisieren."
    },
-   "alertMessagePendingTransactions": {
-      "message": "Diese Transaktion wird erst dann durchgeführt, wenn eine vorherige Transaktion abgeschlossen ist. Erfahren Sie, wie Sie eine Transaktion abbrechen oder beschleunigen können."
-   },
    "alertMessageSignInDomainMismatch": {
       "message": "Die Website, die die Anfrage stellt, ist nicht die Website, bei der Sie sich anmelden. Dies könnte ein Versuch sein, Ihre Anmeldedaten zu stehlen."
    },
@@ -451,6 +451,9 @@
    },
    "alertModalReviewAllAlerts": {
       "message": "Alle Benachrichtigungen überprüfen"
+   },
+   "alertReasonChangeInSimulationResults": {
+      "message": "Ergebnisse haben sich geändert"
    },
    "alertReasonGasEstimateFailed": {
       "message": "Ungenaue Gebühr"
@@ -834,14 +837,23 @@
    "bridge": {
       "message": "Bridge"
    },
+   "bridgeCalculatingAmount": {
+      "message": "Berechnen ..."
+   },
    "bridgeDontSend": {
       "message": "Bridge, nicht senden"
+   },
+   "bridgeEnterAmount": {
+      "message": "Betrag eingeben"
    },
    "bridgeFrom": {
       "message": "Bridge von"
    },
    "bridgeSelectNetwork": {
       "message": "Netzwerk wählen"
+   },
+   "bridgeSelectTokenAndAmount": {
+      "message": "Token und Betrag auswählen"
    },
    "bridgeTo": {
       "message": "Bridge nach"
@@ -1009,9 +1021,6 @@
    "confirmRecoveryPhrase": {
       "message": "Geheime Wiederherstellungsphrase bestätigen"
    },
-   "confirmTitleApproveTransaction": {
-      "message": "Bewilligungsanfrage"
-   },
    "confirmTitleDeployContract": {
       "message": "Einen Kontrakt nutzen"
    },
@@ -1155,6 +1164,14 @@
    },
    "connectedWithAccountName": {
       "description": "$1 represents account name",
+      "message": "Verbunden mit $1"
+   },
+   "connectedWithNetwork": {
+      "description": "$1 represents network length",
+      "message": "$1 Netzwerke verbunden"
+   },
+   "connectedWithNetworkName": {
+      "description": "$1 represents network name",
       "message": "Verbunden mit $1"
    },
    "connecting": {
@@ -1490,6 +1507,9 @@
    "dcent": {
       "message": "D'Cent"
    },
+   "debitCreditPurchaseOptions": {
+      "message": "Kaufoptionen per Debit- oder Kreditkarte"
+   },
    "decimal": {
       "message": "Token-Dezimale"
    },
@@ -1799,6 +1819,9 @@
    "editSpendingCapError": {
       "message": "Die Ausgabenobergrenze darf nicht mehr als $1 Dezimalstellen überschreiten. Entfernen Sie die Dezimalstellen, um fortzufahren."
    },
+   "editSpendingCapSpecialCharError": {
+      "message": "Nur Zahlen eingeben"
+   },
    "enableAutoDetect": {
       "message": " Automatische Erkennung aktivieren"
    },
@@ -1901,9 +1924,41 @@
       "description": "Displayed error name for debugging purposes. $1 is the error name",
       "message": "Code: $1"
    },
+   "errorPageContactSupport": {
+      "description": "Button for contact MM support",
+      "message": "Support kontaktieren"
+   },
+   "errorPageDescribeUsWhatHappened": {
+      "description": "Button for submitting report to sentry",
+      "message": "Beschreiben Sie, was vorgefallen ist"
+   },
+   "errorPageInfo": {
+      "description": "Information banner shown in the error page",
+      "message": "Ihre Daten können nicht angezeigt werden. Keine Sorge, Ihre Wallet und Ihr Geld sind sicher."
+   },
+   "errorPageMessageTitle": {
+      "description": "Title for description, which is displayed for debugging purposes",
+      "message": "Fehlermeldung"
+   },
+   "errorPageSentryFormTitle": {
+      "description": "In sentry feedback form, The title at the top of the feedback form.",
+      "message": "Beschreiben Sie, was vorgefallen ist"
+   },
+   "errorPageSentryMessagePlaceholder": {
+      "description": "In sentry feedback form, The placeholder for the feedback description input field.",
+      "message": "Die Übermittlung von Details, z. B. wie wir den Fehler reproduzieren können, wird uns bei der Behebung des Problems helfen."
+   },
+   "errorPageSentrySuccessMessageText": {
+      "description": "In sentry feedback form, The message displayed after a successful feedback submission.",
+      "message": "Vielen Dank! Wir werden uns bald damit befassen."
+   },
    "errorPageTitle": {
       "description": "Title of generic error page",
       "message": "MetaMask hat einen Fehler festgestellt."
+   },
+   "errorPageTryAgain": {
+      "description": "Button for try again",
+      "message": "Erneut versuchen"
    },
    "errorStack": {
       "description": "Title for error stack, which is displayed for debugging purposes",
@@ -2066,6 +2121,9 @@
    },
    "functionType": {
       "message": "Funktionstyp"
+   },
+   "fundingMethod": {
+      "message": "Methode der Mittelbereitstellung"
    },
    "gas": {
       "message": "Gas"
@@ -3721,6 +3779,12 @@
    "outdatedBrowserNotification": {
       "message": "Ihr Browser ist veraltet. Wenn Sie Ihren Browser nicht aktualisieren, können Sie keine Sicherheits-Patches und neue Funktionen von MetaMask erhalten."
    },
+   "overrideContentSecurityPolicyHeader": {
+      "message": "Content-Security-Policy-Header aufheben"
+   },
+   "overrideContentSecurityPolicyHeaderDescription": {
+      "message": "Diese Option dient als Behelfslösung für ein bekanntes Problem in Firefox, bei dem der Content-Security-Policy-Header einer dApp verhindern kann, dass die Erweiterung ordnungsgemäß geladen wird. Die Deaktivierung dieser Option wird nicht empfohlen, es sei denn, sie ist für die Kompatibilität bestimmter Webseiten erforderlich."
+   },
    "padlock": {
       "message": "Padlock"
    },
@@ -4028,12 +4092,6 @@
    },
    "permissionsPageEmptySubContent": {
       "message": "Hier können Sie die Genehmigungen sehen, die Sie installierten Snaps oder verbundenen Websites gegeben haben."
-   },
-   "permissionsPageTourDescription": {
-      "message": "Dies ist Ihr Kontrollfeld zum Verwalten der Genehmigungen für verbundene Websites und installierte Snaps."
-   },
-   "permissionsPageTourTitle": {
-      "message": "Verbundene Websites sind nun Genehmigungen"
    },
    "permitSimulationDetailInfo": {
       "message": "Sie erteilen dem Spender die Genehmigung, diese Menge an Tokens von Ihrem Konto auszugeben."
@@ -4392,6 +4450,9 @@
    "requestFromInfo": {
       "message": "Dies ist die Seite, auf der Sie um Ihre Unterschrift gebeten werden."
    },
+   "requestFromInfoSnap": {
+      "message": "Dies ist der Snap, der Sie zur Unterschrift auffordert."
+   },
    "requestFromTransactionDescription": {
       "message": "Dies ist die Website, die Sie um Ihre Bestätigung bittet."
    },
@@ -4413,6 +4474,10 @@
    "requestingForAccount": {
       "description": "Name of Account",
       "message": "Anfordern für $1"
+   },
+   "requestingForNetwork": {
+      "description": "Name of Network",
+      "message": "Anforderung von $1"
    },
    "requestsAwaitingAcknowledgement": {
       "message": "Anfragen warten auf Bestätigung"
@@ -4892,6 +4957,9 @@
    "simulationDetailsIncomingHeading": {
       "message": "Sie erhalten"
    },
+   "simulationDetailsNoChanges": {
+      "message": "Keine Änderungen"
+   },
    "simulationDetailsOutgoingHeading": {
       "message": "Sie senden"
    },
@@ -4913,6 +4981,9 @@
    },
    "simulationDetailsTransactionReverted": {
       "message": "Diese Transaktion wird wahrscheinlich scheitern"
+   },
+   "simulationDetailsUnavailable": {
+      "message": "Nicht verfügbar"
    },
    "simulationErrorMessageV2": {
       "message": "Wir konnten das Gas nicht schätzen. Es könnte einen Fehler im Contract geben und diese Transaktion könnte fehlschlagen."
@@ -5139,6 +5210,15 @@
    "snapsUIError": {
       "description": "This is shown when the insight snap throws an error. $1 is the snap name",
       "message": "Kontaktieren Sie die Ersteller von $1 für weitere Unterstützung."
+   },
+   "solanaSupportSectionTitle": {
+      "message": "Solana"
+   },
+   "solanaSupportToggleDescription": {
+      "message": "Bei Aktivierung dieser Funktion haben Sie die Möglichkeit, ein Solana-Konto zu Ihrer MetaMask-Erweiterung hinzuzufügen, das von Ihrer bestehenden geheimen Wiederherstellungsphrase abgeleitet ist. Hierbei handelt es sich um eine experimentelle Beta-Funktion, deren Nutzung also auf eigene Gefahr erfolgt."
+   },
+   "solanaSupportToggleTitle": {
+      "message": "Aktivierung der Funktion „Ein neues Solana-Konto hinzufügen (Beta)“"
    },
    "somethingDoesntLookRight": {
       "description": "A false positive message for users to contact support. $1 is a link to the support page.",
@@ -5798,6 +5878,10 @@
    "swapTokenVerifiedOn1SourceTitle": {
       "message": "Möglicherweise unglaubwürdiges Token"
    },
+   "swapTokenVerifiedSources": {
+      "description": "$1 the number of sources that have verified the token, $2 points the user to a block explorer as a place they can verify information about the token.",
+      "message": "Bestätigt durch $1 Quellen. Auf $2 verifiziert."
+   },
    "swapTooManyDecimalsError": {
       "description": "$1 is a token symbol and $2 is the max. number of decimals allowed for the token",
       "message": "$1 erlaubt bis zu $2 Dezimalstellen"
@@ -5915,6 +5999,12 @@
    "tips": {
       "message": "Tipps"
    },
+   "tipsForUsingAWallet": {
+      "message": "Tipps zur Verwendung einer Wallet"
+   },
+   "tipsForUsingAWalletDescription": {
+      "message": "Das Hinzufügen von Tokens eröffnet weitere Möglichkeiten zur Nutzung von web3."
+   },
    "to": {
       "message": "An"
    },
@@ -5966,6 +6056,9 @@
    },
    "tokenList": {
       "message": "Token-Listen"
+   },
+   "tokenMarketplace": {
+      "message": "Token-Marktplatz"
    },
    "tokenScamSecurityRisk": {
       "message": "Token-Betrügereien und Sicherheitsrisiken"
@@ -6285,9 +6378,6 @@
    "use4ByteResolution": {
       "message": "Smart Contracts dekodieren"
    },
-   "use4ByteResolutionDescription": {
-      "message": "Um das Benutzererlebnis zu verbessern, passen wir die Aktivitätsregisterkarte mit Nachrichten an, die auf den Smart Contracts basieren, mit denen Sie interagieren. MetaMask verwendet einen Dienst namens 4byte.directory, um Daten zu entschlüsseln und Ihnen eine Version eines Smart Contracts anzuzeigen, die leichter zu lesen ist. Dies trägt dazu bei, die Wahrscheinlichkeit zu verringern, dass Sie bösartige Smart-Contract-Aktionen genehmigen, kann aber dazu führen, dass Ihre IP-Adresse weitergegeben wird."
-   },
    "useMultiAccountBalanceChecker": {
       "message": "Kontoguthaben-Anfragen sammeln"
    },
@@ -6480,10 +6570,6 @@
    },
    "wrongNetworkName": {
       "message": "Laut unseren Aufzeichnungen stimmt dieser Netzwerkname nicht mit dieser Chain-ID überein."
-   },
-   "xOfYPending": {
-      "description": "$1 and $2 are intended to be two numbers, where $2 is a total number of pending confirmations, and $1 is a count towards that total",
-      "message": "$1 von $2 ausstehend"
    },
    "yes": {
       "message": "Ja"
