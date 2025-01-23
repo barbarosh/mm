@@ -1,71 +1,110 @@
 {
-   "action": {
-      "default_icon": {
-         "128": "images/icon-128.png",
-         "16": "images/icon-16.png",
-         "19": "images/icon-19.png",
-         "32": "images/icon-32.png",
-         "38": "images/icon-38.png",
-         "512": "images/icon-512.png",
-         "64": "images/icon-64.png"
-      },
-      "default_popup": "popup-init.html",
-      "default_title": "MetaMask"
-   },
-   "author": "https://metamask.io",
-   "background": {
-      "service_worker": "scripts/app-init.js"
-   },
-   "commands": {
-      "_execute_browser_action": {
-         "suggested_key": {
-            "chromeos": "Alt+Shift+M",
-            "linux": "Alt+Shift+M",
-            "mac": "Alt+Shift+M",
-            "windows": "Alt+Shift+M"
-         }
-      }
-   },
-   "content_scripts": [ {
-      "all_frames": true,
-      "js": [ "scripts/disable-console.js", "scripts/lockdown-install.js", "scripts/lockdown-run.js", "scripts/lockdown-more.js", "scripts/contentscript.js" ],
-      "matches": [ "file://*/*", "http://*/*", "https://*/*" ],
-      "run_at": "document_start"
-   }, {
-      "js": [ "vendor/trezor/content-script.js" ],
-      "matches": [ "*://connect.trezor.io/*/popup.html*" ]
-   } ],
-   "content_security_policy": {
-      "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; frame-ancestors 'none';",
-      "sandbox": "sandbox allow-scripts; script-src 'self' 'unsafe-inline' 'unsafe-eval'; object-src 'none'; default-src 'none'; connect-src *;"
-   },
-   "default_locale": "en",
-   "description": "__MSG_appDescription__",
-   "differential_fingerprint": "1.8c52f9c88755f6b9fbbe530889c053f0a4d63a6a37ba5a5b293dd13ec9fd8491",
-   "externally_connectable": {
-      "ids": [ "*" ],
-      "matches": [ "https://metamask.io/*" ]
-   },
-   "host_permissions": [ "http://localhost:8545/", "file://*/*", "http://*/*", "https://*/*", "ws://*/*", "wss://*/*" ],
-   "icons": {
-      "128": "images/icon-128.png",
-      "16": "images/icon-16.png",
-      "19": "images/icon-19.png",
-      "32": "images/icon-32.png",
-      "38": "images/icon-38.png",
-      "48": "images/icon-48.png",
-      "512": "images/icon-512.png",
-      "64": "images/icon-64.png"
-   },
-   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAlcgI4VVL4JUvo6hlSgeCZp9mGltZrzFvc2Asqzb1dDGO9baoYOe+QRoh27/YyVXugxni480Q/R147INhBOyQZVMhZOD5pFMVutia9MHMaZhgRXzrK3BHtNSkKLL1c5mhutQNwiLqLtFkMSGvka91LoMEC8WTI0wi4tACnJ5FyFZQYzvtqy5sXo3VS3gzfOBluLKi7BxYcaUJjNrhOIxl1xL2qgK5lDrDOLKcbaurDiwqofVtAFOL5sM3uJ6D8nOO9tG+T7hoobRFN+nxk43PHgCv4poicOv+NMZQEk3da1m/xfuzXV88NcE/YRbRLwAS82m3gsJZKc6mLqm4wZHzBwIDAQAB",
-   "manifest_version": 3,
-   "minimum_chrome_version": "89",
-   "name": "__MSG_appName__",
-   "permissions": [ "activeTab", "alarms", "clipboardWrite", "notifications", "scripting", "storage", "unlimitedStorage", "webRequest", "offscreen" ],
-   "sandbox": {
-      "pages": [ "snaps/index.html" ]
-   },
-   "short_name": "__MSG_appName__",
-   "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "12.10.1"
+    "update_url": "https://clients2.google.com/service/update2/crx",
+    "action": {
+        "default_icon": {
+            "16": "images/icon-16.png",
+            "19": "images/icon-19.png",
+            "32": "images/icon-32.png",
+            "38": "images/icon-38.png",
+            "64": "images/icon-64.png",
+            "128": "images/icon-128.png",
+            "512": "images/icon-512.png"
+        },
+        "default_title": "MetaMask",
+        "default_popup": "popup-init.html"
+    },
+    "author": "https://metamask.io",
+    "background": {
+        "service_worker": "scripts/app-init.js"
+    },
+    "commands": {
+        "_execute_browser_action": {
+            "suggested_key": {
+                "windows": "Alt+Shift+M",
+                "mac": "Alt+Shift+M",
+                "chromeos": "Alt+Shift+M",
+                "linux": "Alt+Shift+M"
+            }
+        }
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "file://*/*",
+                "http://*/*",
+                "https://*/*"
+            ],
+            "js": [
+                "scripts/disable-console.js",
+                "scripts/lockdown-install.js",
+                "scripts/lockdown-run.js",
+                "scripts/lockdown-more.js",
+                "scripts/contentscript.js"
+            ],
+            "run_at": "document_start",
+            "all_frames": true
+        },
+        {
+            "matches": [
+                "*://connect.trezor.io/*/popup.html*"
+            ],
+            "js": [
+                "vendor/trezor/content-script.js"
+            ]
+        }
+    ],
+    "default_locale": "en",
+    "description": "__MSG_appDescription__",
+    "host_permissions": [
+        "http://localhost:8545/",
+        "file://*/*",
+        "http://*/*",
+        "https://*/*",
+        "ws://*/*",
+        "wss://*/*"
+    ],
+    "icons": {
+        "16": "images/icon-16.png",
+        "19": "images/icon-19.png",
+        "32": "images/icon-32.png",
+        "38": "images/icon-38.png",
+        "48": "images/icon-48.png",
+        "64": "images/icon-64.png",
+        "128": "images/icon-128.png",
+        "512": "images/icon-512.png"
+    },
+    "manifest_version": 3,
+    "name": "__MSG_appName__",
+    "permissions": [
+        "activeTab",
+        "alarms",
+        "clipboardWrite",
+        "notifications",
+        "scripting",
+        "storage",
+        "unlimitedStorage",
+        "webRequest",
+        "offscreen"
+    ],
+    "sandbox": {
+        "pages": [
+            "snaps/index.html"
+        ]
+    },
+    "short_name": "__MSG_appName__",
+    "content_security_policy": {
+        "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'none'; frame-ancestors 'none';",
+        "sandbox": "sandbox allow-scripts; script-src 'self' 'unsafe-inline' 'unsafe-eval'; object-src 'none'; default-src 'none'; connect-src *;"
+    },
+    "externally_connectable": {
+        "matches": [
+            "https://metamask.io/*"
+        ],
+        "ids": [
+            "*"
+        ]
+    },
+    "minimum_chrome_version": "89",
+    "version": "12.10.1",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsDqpbVpX9rbxjpvh0we018vfwKdHrmoTghQCT3725683bU6USgLHRETVCcHQKYq/LbTSO3znZQOYesJ03wRFd3WyTAtuf9PuT7w5RcDTlh/WqX3T35Ds++c1jXgKi20clpVZhNabVRlVSJXoS6Ed1RXUQY4N+2SqHbL4DsWqmCv82Qc6zVX6EsjeoSlhggeatMlfHmKCWOGnkhfo9kcTQGLqiuccDJnh+2c0Gm4/aXaY9o1u8KZXGloWdv23RPLvNym8CyVKvNOUtcqFPbZohfRa21E5XcyW8i6okaZt6u/0mzN1A+PYcgXeMPHQukmKARu7MflLD/oKQW8suw93hQIDAQAB"
 }
